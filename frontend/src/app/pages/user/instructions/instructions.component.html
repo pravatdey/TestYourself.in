@@ -1,0 +1,66 @@
+<div class="bootstrap-weapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="mt20">
+                    <mat-card-header>
+                        <mat-card-title>
+                            Read the instructions of this page carefully
+                        </mat-card-title>
+                        <mat-card-subtitle>One step more to go</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <h1>{{question.title}}</h1>
+                        <!-- <p>{{question.description}}</p> -->
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Important Instructions</h1>
+                        <ul>
+                            <li>
+                                This quiz only for pratices 
+                            </li>
+                            <li>
+                                You have to submit this Module with in <b> {{question.numberOfQuestions*2}} Minutes.</b>
+                            </li>
+                            <li>
+                                This is a timed test.Please make sure you are not interrupted during the test, as the timer cannot be paused once started.
+                            </li>
+                            <li>
+                                You can attempt the quiz any number of time.
+                            </li>
+                            <li>There are <b>{{question.numberOfQuestions}}</b>  Questions in this Question Module</li>
+                            <li>Each questions carries <b>{{question.maxMarks/question.numberOfQuestions}}marks</b>. No nagative marking for wrong ones. </li>
+                            <li>All Question is of MCQ Types</li>
+                        </ul>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h1>Attempting test</h1>
+                        <ul>
+                            <li>
+                                Click <b>Start test</b> button to start the quiz
+                            </li>
+                            <li>
+                                The time will start the moment you click the start Test button.
+                            </li>
+                            <li>
+                                You can not resume this question Module,if interrupted due to any reason.
+                            </li>
+                            <li>
+                                Scroll to move next questions
+                            </li>
+                            <li>
+                                 Click on submit Test button on completion of the question.
+                            </li>
+                            <li>
+                                Report of the test is automatically generated in the form of PDF copy
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions class="text" >
+                        <button (click)="start_test()"   mat-raised-button color="accent">Start Test </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

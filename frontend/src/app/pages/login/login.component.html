@@ -1,0 +1,51 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                 <div class="container text-center">
+                <img class="f" src="../../../assets/exam.png" alt="">
+                </div> 
+                <h1 class="text-center" style="color: rgb(236, 7, 7);"><strong>Login Here !!</strong> </h1>
+             
+                <form  (ngSubmit)="formSubmit()">
+                    <!-- username -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <input
+                        [(ngModel)]="LoginData.username"
+                        name="username"
+                        matInput placeholder="Enter here" required/>
+                        
+                    </mat-form-field>
+                    <!-- password -->
+                     <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input [(ngModel)]= "LoginData.password" name="password" type="password"
+                        matInput placeholder="Enter here" required/>
+                        
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                        <button mat-raised-button color="primary" type="submit">Login</button>
+                    </div>
+                   
+                    <div class="container mt20">
+                        <a [routerLink]="'/forget'" mat-icon-button class="example-icon favorite-icon " style="font-size: 18px;color: blue;"
+                        aria-label="Example icon-button with heart icon">
+                        Forgetpassword
+                      </a>
+                      
+                        <!-- <a  mat-raised-button [routerLink]="'/register'"  target="_blank" style="color: blue;">New  Account</a><br> -->
+                        <!-- <a  mat-raised-button href="forget" target="_blank" style="color: blue;">Forget password</a> -->
+                    </div>
+                    
+                     
+                
+                </form>
+            </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+

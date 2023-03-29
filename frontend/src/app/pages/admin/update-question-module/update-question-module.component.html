@@ -1,0 +1,57 @@
+<mat-card>
+    <h1 class="mt20 mat2">Update Question</h1>
+    <div class="container">
+       <div class="row">
+          <div class="col-md-8 offset-md-2">
+             <form *ngIf="question" (ngSubmit)="updateData()">
+                <!-- title field -->
+                <mat-form-field class="mat1" appearance="fill">
+                   <mat-label>Enter Title</mat-label>
+                   <input [(ngModel)]="question.title" type="text" name="title" placeholder="Enter here" required matInput />
+                </mat-form-field>
+                <!-- description field  -->
+                <mat-form-field class="mat1" appearance="fill">
+                   <mat-label>Enter Description</mat-label>
+                   <textarea [(ngModel)]="question.description" type="text" name="description" placeholder="Enter here" required matInput rows="5"></textarea>
+                </mat-form-field>
+                <div class="row">
+                   <div class="col-md-6">
+                      <!-- MaxMark -->
+                      <mat-form-field class="mat1" appearance="fill">
+                         <mat-label>Maximum Marks</mat-label>
+                         <input [(ngModel)]="question.maxMarks" type="text" name="maxMarks" placeholder="Enter here" required matInput />
+                      </mat-form-field>
+                   </div>
+                   <div class="col-md-6">
+                      <!-- number of Question to bre shown -->
+                      <mat-form-field class="mat1" appearance="fill">
+                         <mat-label>Number of Question</mat-label>
+                         <input [(ngModel)]="question.numberOfQuestions" type="text" name="numberOfQuestion" placeholder="Enter here" required matInput />
+                      </mat-form-field>
+                   </div>
+                </div>
+                <!-- active field -->
+                <mat-slide-toggle name="active" [(ngModel)]="question.active" class="mt20" [checked]="false" >
+                   Publish Status
+                </mat-slide-toggle>
+                <br>
+                <mat-form-field appearance="fill" class="mt20 mat1" >
+                   <mat-label >Categories</mat-label>
+                   <mat-select   name="category" [(ngModel)]="question.category.cid">
+                     <mat-option *ngFor="let  c of  categories" [value]="c.cid" >
+                       {{c.title}}
+                     </mat-option>
+                   </mat-select>
+                 </mat-form-field>
+ 
+                 <div class="container text-center mat3">
+                   <button mat-raised-button color="primary" type="submit">Update</button>
+                 </div>
+             </form>
+ 
+          </div>
+       </div>
+    </div>
+ </mat-card>
+ 
+ 

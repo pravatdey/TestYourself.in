@@ -1,0 +1,54 @@
+<mat-card *ngIf="user">
+    <h1 class="mt1">Your Profile Details</h1>
+     
+    <mat-card-content>
+        <div class="bootstrap-wapper">
+            <div class="container ">
+                <div class="container text-center">
+                    <img src="../../../assets/Pkd.JPG" alt="" class="profile_image" />
+                    <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>Userid</td>
+                                <td>{{user.Userid}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{user.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled?"ACTIVE":"NOTACTIVE"}}</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+ 
+    <div container class="text-center">
+        <button mat-raised-button color="accent">Update</button>
+
+        <button style="margin-left: 20px;"  mat-raised-button color="warn">SHARE</button>
+    </div>
+
+
+</mat-card>

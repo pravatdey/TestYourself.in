@@ -1,0 +1,11 @@
+ <ngx-ui-loader pbColor="primary" 
+   [pbThickness]="6"
+   textColor="#ff4081"
+ text="Pleas wait..."></ngx-ui-loader>
+
+ <div ngxUiLoaderBlurred (blur)="10">
+ <app-navbar></app-navbar>
+ <router-outlet></router-outlet>
+</div>
+
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
